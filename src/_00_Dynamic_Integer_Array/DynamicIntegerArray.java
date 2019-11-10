@@ -2,32 +2,35 @@ package _00_Dynamic_Integer_Array;
 
 public class DynamicIntegerArray {
 	//1. Create a private int array. Don't initialize it.
-
+private int[] data;
 	
 	public DynamicIntegerArray() {
 		//2. Initialize the int array to have 0 elements. 
 		//   This will prevent a null pointer exception
-	
+	data= new int[0];
 	}
 	
 	//3. Complete the steps in the add method
 	public void add(int v) {
 		//A. create and initialize a new int array to be one 
 		//   element longer than the member array
-		
+		int[] array = new int[]{data.length+1};
 		//B. set the last element of your new array to 
 		//   the value passed into the method
-		
+	array[array.length-1]=v;
 		//C. iterate through the member array and 
 		//   copy every element from the member array 
 		//   to the new array
-		
+	for (int i = 0; i < 3; i++) {
+		data[i]= array[i];
+	}
 		//D. set the member array equal to the new array.
+	data= array;
 	}
 	
 	//4. Complete the steps in the get method
 	public int get(int location) {
-		//A. Return the value of the memeber array at the location passed in
+		//A. Return the value of the member array at the location passed in
 		return 0;
 	}
 	
@@ -38,6 +41,7 @@ public class DynamicIntegerArray {
 	public void set(int v, int location) {
 		//A. set the variable at the location passed in to the method
 		//   to the new value v
+		location = v;
 	}
 	
 	//7. Complete the steps in the insert method
@@ -46,7 +50,16 @@ public class DynamicIntegerArray {
 		//   element longer than the member array
 		
 		//B. Make a for loop that iterates through the new array
-
+for (int i = 0; i < data.length; i++) {
+	if (i<location) {
+		
+	}else if (i>location) {
+		
+	}
+	else {
+		
+	}
+}
 			//C. if i is less than location:
 		    //		set the element at i of the new array to the element at i of the member array
 			
