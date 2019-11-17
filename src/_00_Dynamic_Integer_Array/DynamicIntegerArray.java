@@ -48,16 +48,17 @@ private int[] data;
 	public void insert(int v, int location) {
 		//A. create and initialize a new int array to be one 
 		//   element longer than the member array
-		
+		int[] array2= new int[] {data.length+1};
+		array2[v] = data[v]+1;
 		//B. Make a for loop that iterates through the new array
 for (int i = 0; i < data.length; i++) {
 	if (i<location) {
-		
+		i= data[i];
 	}else if (i>location) {
-		
+		i=data[i-1];
 	}
 	else {
-		
+		i=array2[v];
 	}
 }
 			//C. if i is less than location:
@@ -70,7 +71,7 @@ for (int i = 0; i < data.length; i++) {
 		
 		
 		//F. set the member array equal to the new array
-	
+	array2[v]=data[v];
 	}
 	
 	//8. Run the tests again and check your progress
@@ -78,9 +79,19 @@ for (int i = 0; i < data.length; i++) {
 	//9. Complete the steps in the remove method
 	public void remove(int location) {
 		//A. create a new array that is one element smaller than the member array
-		
+		int[] array3 = new int[] {data.length-1};
 		//B. make a for loop to iterate through the member array
-		
+		for (int i = 0; i < array3.length; i++) {
+			if (i<location) {
+				array3[i]=data[i];
+
+			}else if (i>location) {
+				array3[i]=data[i-1];
+				               
+			}else {
+		continue;
+			}
+		}
 			//C. if i  is less than location
 			//		set the element at i of the new array to the element at i of the member array
 			
@@ -96,12 +107,14 @@ for (int i = 0; i < data.length; i++) {
 	
 	//11. Complete the size method so that it returns the length of the member array.
 	public int size() {
-		return 0;
+		return data.length;
 	}
 	
 	//12. Complete the clear array so that it sets the member array 
 	//    equal to a new integer array of size 0
 	public void clear() {
+		int[] arrayf= new int[0];
+		data=arrayf;
 	}
 	
 	//13. Run the test again to see if you are finished.
