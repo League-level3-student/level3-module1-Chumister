@@ -2,6 +2,8 @@ package _01_IntroToArrayLists;
 
 import java.util.ArrayList;
 
+import java.util.Iterator;
+
 /**
  * Copyright The League of Amazing Programmers 2013-2017 Level 3 Two ArrayList
  * Cleaning Exercises Duration=.00 Platform=Eclipse Type=Recipe Objectives=
@@ -37,6 +39,11 @@ public class _04_RemovingStuffFromArrayLists {
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
 		
 		
+		for (Iterator<Stuff> i = stuffIFoundInTheYard.iterator(); i.hasNext();) {
+			Stuff stuff = i.next();
+			if (stuff instanceof Dirt) {
+				i.remove();
+			}
 		
 		
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
@@ -75,7 +82,14 @@ public class _04_RemovingStuffFromArrayLists {
 		truth.add('#');
 		/* TODO 2: Remove the hash symbols and print out the truth. */
 
-		
-		
+for (Iterator<Character> i1=truth.iterator(); i1.hasNext();) {
+	Character character = i1.next();
+	if (character.charValue() == '#') {
+		i1.remove();
 	}
+}		
+for (Character character : truth) {
+	System.out.print(character);
 }
+	}
+}}
