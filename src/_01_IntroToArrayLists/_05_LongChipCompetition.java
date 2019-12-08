@@ -19,6 +19,11 @@ public class _05_LongChipCompetition {
 		new _05_LongChipCompetition().run();
 	}
 	
+	private void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	private void initializeBeatles() {
 		Beatle george = new Beatle("George");
 		Beatle john = new Beatle("John");
